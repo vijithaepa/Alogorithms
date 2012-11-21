@@ -16,21 +16,21 @@ public class TestSortingAlgorithms {
 		for (int i = 0; i < 10; i++) {
 			collection[i] = (int) (Math.random() * 100);
 		}
-		System.out.println("\nBefore Sorting : \t" + Arrays.toString(collection));
+		System.out.println("\nData set Before Sorting : \t" + Arrays.toString(collection));
 		Arrays.sort(collection);
 	}
 
 	@Test
 	public void shouldReturnSortedCollectionFromBubbleSortAlgorithm() {
 		int[] actualSortedCollection = SortingAlgorithm.sortInBubbleSort(collection);
-		System.out.println("After Bubble Sorting : \t" + Arrays.toString(actualSortedCollection));
+		System.out.println("Data set After Bubble Sorting : \t" + Arrays.toString(actualSortedCollection));
 		assertEquals(actualSortedCollection[2], collection[2]);
 	}
 
 	@Test
 	public void shouldReturnSortedCollectionFromQuickSortAlgorithm() {
 		int[] actualSortedCollection = SortingAlgorithm.sortInQuickSort(collection);
-		System.out.println("After Quick Sorting : \t" + Arrays.toString(actualSortedCollection));
+		System.out.println("Data set After Quick Sorting : \t" + Arrays.toString(actualSortedCollection));
 		assertEquals(actualSortedCollection[2], collection[2]);
 	}
 }
